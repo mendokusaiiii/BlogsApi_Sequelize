@@ -2,6 +2,7 @@ const express = require('express');
 const userRoutes = require('./routes/userRoutes');
 const loginRoutes = require('./routes/loginRoutes');
 const categoryRoutes = require('./routes/categoryRoutes');
+const postRoutes = require('./routes/postRoutes');
 
 const app = express();
 // não remova ou mova esse endpoint
@@ -13,6 +14,7 @@ app.use(express.json());
 app.use('/user', userRoutes);
 app.use('/login', loginRoutes);
 app.use('/categories', categoryRoutes);
+app.use('/post', postRoutes);
 
 // ...
 
